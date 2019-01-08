@@ -24,14 +24,18 @@ function isPalindrome(string) {
   return false
 }
 
-function addUpTo() {
-
+function addUpTo(array, index) {
+  return index ? array[index] + addUpTo(array, --index) : array[index]
 }
 
-function maxOf() {
-
+function maxOf(array) {
+  if (array.length === 1) {
+    return array[0]
+  } else {
+    return Math.max(array.shift(), maxOf(array))
+  }
 }
 
-function includesNumber() {
+function includesNumber(array, element) {
 
 }
