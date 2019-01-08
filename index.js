@@ -37,5 +37,14 @@ function maxOf(array) {
 }
 
 function includesNumber(array, element) {
-
+  if (array.length === 0) {
+    return false
+  } else {
+    let chosen = array.shift()
+    if (element === chosen) {
+      return true
+    } else {
+      return includesNumber(array, element)
+    }
+  }
 }
